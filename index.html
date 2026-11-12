@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>White Frost – Refrigeration tools, spares and cold rooms, Gandhidham</title>
 <meta name="description" content="Refrigeration spare parts, tools and complete cold rooms from Gandhidham, Kutch.">
+<script>document.documentElement.className+=" js"</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
@@ -14,26 +15,30 @@
 
 <header class="top">
   <a class="mark" href="#top">White Frost</a>
-  <nav>
-    <a href="#range">Range</a>
-    <a href="#rooms">Cold rooms</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <div class="right">
+    <span class="reading" id="reading" aria-hidden="true">+10°C</span>
+    <nav>
+      <a href="#range">Range</a>
+      <a href="#rooms">Cold rooms</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+  <i class="progress" id="progress"></i>
 </header>
 
 <main id="top">
   <section class="hero">
-    <h1>Cold, held exactly where you set it.</h1>
-    <p>Refrigeration tools, spare parts and complete cold rooms, supplied from Gandhidham, Kutch.</p>
-    <div class="actions">
+    <h1><span class="ln"><span>Cold, held</span></span><span class="ln"><span>exactly where</span></span><span class="ln"><span>you set it.</span></span></h1>
+    <p class="intro">Refrigeration tools, spare parts and complete cold rooms, supplied from Gandhidham, Kutch.</p>
+    <div class="actions intro">
       <a class="btn" href="#contact" data-product="General refrigeration requirement">Enquire now</a>
       <a class="plain" href="#range">See the range</a>
     </div>
 
-    <div class="ruler" role="img" aria-label="Temperature scale from minus 40 to plus 15 degrees Celsius, marked at minus 18">
-      <div class="marker"><span>−18°C</span></div>
-      <div class="scale"></div>
-      <div class="labels"><span>−40</span><span>−30</span><span>−20</span><span>−10</span><span>0</span><span>+10</span></div>
+    <div class="ruler" role="img" aria-label="Temperature scale from minus 40 to plus 10 degrees Celsius, marked at minus 18">
+      <div class="marker" id="marker"><span id="mtemp">−18°C</span></div>
+      <div class="scale" id="scale"></div>
+      <div class="labels"><span style="left:0">−40</span><span style="left:20%">−30</span><span style="left:40%">−20</span><span style="left:60%">−10</span><span style="left:80%">0</span><span style="left:100%">+10</span></div>
     </div>
   </section>
 
@@ -51,10 +56,11 @@
   </section>
 
   <section class="cold" id="rooms">
+    <canvas id="snow" aria-hidden="true"></canvas>
     <div class="inner">
       <h2>Cold rooms</h2>
       <p class="lead">Panels, doors, refrigeration and controls supplied as one system, sized to your space and load.</p>
-      <table>
+      <table id="temps">
         <thead><tr><th scope="col">Holds at</th><th scope="col">Suited to</th></tr></thead>
         <tbody>
           <tr><td>+2 to +8°C</td><td>Fruit, vegetables, dairy, beverages, pharma</td></tr>
@@ -94,7 +100,7 @@
           </select>
         </label>
         <label>Details (model, size, quantity)<textarea id="msg" rows="3"></textarea></label>
-        <button class="btn" type="submit">Enquire</button>
+        <button class="btn" type="submit" id="send">Enquire</button>
       </form>
     </div>
   </section>
