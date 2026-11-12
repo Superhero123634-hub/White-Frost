@@ -10,8 +10,26 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="intro.css">
 </head>
 <body>
+
+<div class="gate" id="gate" role="dialog" aria-label="Welcome to White Frost">
+  <i class="door l"></i><i class="door r"></i>
+  <canvas id="space" aria-hidden="true"></canvas>
+  <button class="skip" id="skip" type="button">Skip intro</button>
+  <div class="stage" id="stage">
+    <p class="ask">Are you feeling</p>
+    <h2 class="word" aria-label="Frost?"><span style="--i:0">F</span><span style="--i:1">R</span><span style="--i:2">O</span><span style="--i:3">S</span><span style="--i:4">T</span><b style="--i:5">?</b></h2>
+    <button class="yeah" id="yeah" type="button">Yeah!</button>
+  </div>
+  <p class="tag">White Frost, Gandhidham, Kutch</p>
+  <div class="load" id="load" aria-live="polite">
+    <div class="deg" id="deg">+10°C</div>
+    <div class="bar"><i id="fill"></i></div>
+    <p id="status">Cooling to −18°C</p>
+  </div>
+</div>
 
 <header class="top">
   <a class="mark" href="#top">White Frost</a>
@@ -108,6 +126,6 @@
 
 <footer><span>© White Frost, Gandhidham, Kutch</span><span>Refrigeration tools, spares and cold rooms</span></footer>
 
-<script src="script.js"></script>
+<script src="intro.js"></script>
 </body>
 </html>
