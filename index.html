@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>White Frost – Refrigeration tools, spares and cold rooms, Gandhidham</title>
+<meta name="description" content="Refrigeration spare parts, tools and complete cold rooms from Gandhidham, Kutch.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="mark" href="#top">White Frost</a>
+  <nav>
+    <a href="#range">Range</a>
+    <a href="#rooms">Cold rooms</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <h1>Cold, held exactly where you set it.</h1>
+    <p>Refrigeration tools, spare parts and complete cold rooms, supplied from Gandhidham, Kutch.</p>
+    <div class="actions">
+      <a class="btn" href="#contact" data-product="General refrigeration requirement">Enquire now</a>
+      <a class="plain" href="#range">See the range</a>
+    </div>
+
+    <div class="ruler" role="img" aria-label="Temperature scale from minus 40 to plus 15 degrees Celsius, marked at minus 18">
+      <div class="marker"><span>−18°C</span></div>
+      <div class="scale"></div>
+      <div class="labels"><span>−40</span><span>−30</span><span>−20</span><span>−10</span><span>0</span><span>+10</span></div>
+    </div>
+  </section>
+
+  <section class="block" id="range">
+    <h2>The range</h2>
+    <p class="lead">From one relay to a whole plant. Name the part, we confirm stock and price.</p>
+    <ul class="rows">
+      <li><h3>Compressors</h3><p>Hermetic, semi-hermetic and scroll, for repair and replacement.</p><button data-product="Compressors">Enquire</button></li>
+      <li><h3>Condensing units</h3><p>Air and water cooled, from small shops to large stores.</p><button data-product="Condensing units">Enquire</button></li>
+      <li><h3>Evaporators and coils</h3><p>Unit coolers, fans, heaters and defrost parts.</p><button data-product="Evaporators and coils">Enquire</button></li>
+      <li><h3>Controls and valves</h3><p>Thermostats, controllers, solenoid and expansion valves, pressure switches.</p><button data-product="Controls and valves">Enquire</button></li>
+      <li><h3>Gases and tools</h3><p>Refrigerants, gauges, vacuum pumps, flaring and brazing kits.</p><button data-product="Refrigerant gases and service tools">Enquire</button></li>
+      <li><h3>Spare parts</h3><p>Capacitors, relays, motors, filter driers, the small parts that stop a system.</p><button data-product="Spare parts">Enquire</button></li>
+    </ul>
+  </section>
+
+  <section class="cold" id="rooms">
+    <div class="inner">
+      <h2>Cold rooms</h2>
+      <p class="lead">Panels, doors, refrigeration and controls supplied as one system, sized to your space and load.</p>
+      <table>
+        <thead><tr><th scope="col">Holds at</th><th scope="col">Suited to</th></tr></thead>
+        <tbody>
+          <tr><td>+2 to +8°C</td><td>Fruit, vegetables, dairy, beverages, pharma</td></tr>
+          <tr><td>0 to +4°C</td><td>Fresh meat and fish</td></tr>
+          <tr><td>−18 to −22°C</td><td>Frozen food, ice cream, bulk storage</td></tr>
+          <tr><td>−30 to −40°C</td><td>Blast freezing</td></tr>
+        </tbody>
+      </table>
+      <a class="btn light" href="#contact" data-product="Cold room">Request a cold room quote</a>
+    </div>
+  </section>
+
+  <section class="block" id="contact">
+    <div class="split">
+      <div>
+        <h2>Send an enquiry</h2>
+        <p class="lead">Fill in the form. Your email app opens with the message written and addressed to us.</p>
+        <address>
+          Gandhidham, Kutch, Gujarat<br>
+          <a href="tel:+919825940670">+91 98259 40670</a><br>
+          <a href="mailto:hariomrefgim@gmail.com">hariomrefgim@gmail.com</a>
+        </address>
+      </div>
+      <form id="enq">
+        <label>Your name<input id="name" required autocomplete="name"></label>
+        <label>Phone<input id="phone" type="tel" autocomplete="tel"></label>
+        <label>I am looking for
+          <select id="product">
+            <option>Compressors</option>
+            <option>Condensing units</option>
+            <option>Evaporators and coils</option>
+            <option>Controls and valves</option>
+            <option>Refrigerant gases and service tools</option>
+            <option>Spare parts</option>
+            <option>Cold room</option>
+            <option>General refrigeration requirement</option>
+          </select>
+        </label>
+        <label>Details (model, size, quantity)<textarea id="msg" rows="3"></textarea></label>
+        <button class="btn" type="submit">Enquire</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer><span>© White Frost, Gandhidham, Kutch</span><span>Refrigeration tools, spares and cold rooms</span></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
