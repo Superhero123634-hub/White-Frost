@@ -1,0 +1,4 @@
+/* catalogue list on the Products page (reuses .rows from home.css) */
+.cat{margin:40px 0 0;font:600 12px "Archivo",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.cat + .rows{margin-top:10px}
+.cat-note{margin:36px 0 0;color:var(--muted);font-size:14px;max-width:46ch}
