@@ -44,27 +44,5 @@ We supply cold rooms as one complete system: panels, doors, refrigeration equipm
 - **Phone / WhatsApp:** [+91 98259 40670](tel:+919825940670)
 - **Email:** [hariomrefgim@gmail.com](mailto:hariomrefgim@gmail.com)
 - **Location:** Gandhidham, Kutch
-
----
-
-## For the site owner: adding catalogues
-
-The Products page lists every file in the `catalogues/` folder automatically.
-
-1. Open the `catalogues` folder in this repository.
-2. Click **Add file → Upload files** and drag in the PDF (Excel and Word files also work).
-3. Click **Commit changes**.
-4. Wait 1 to 2 minutes, then refresh the Products page.
-
-Tips:
-
-- The file name becomes the title: `copeland-scroll-compressors_2026.pdf` appears as "Copeland scroll compressors 2026".
-- Use a sub-folder to group files, for example `catalogues/Compressors/`.
-- To replace a catalogue, upload a file with the same name. To remove one, delete the file.
-- Keep each file under 100 MB.
-
-The list is built by `scripts/build-catalogues.mjs` and published by `.github/workflows/pages.yml`. In **Settings → Pages**, the source must be set to **GitHub Actions**.
-
----
-
+  
 © White Frost, Gandhidham, Kutch
