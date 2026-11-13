@@ -210,7 +210,7 @@ function draw(){
     inp.placeholder=kind==='gallery'?'Caption (optional)':'Name of catalogue';
     inp.value=r.caption; inp.disabled=!!r.bad||busy;
     inp.addEventListener('input',function(){r.caption=inp.value});
-    var st=document.createElement('div'); st.className='st'+(r.bad?' bad':''); st.textContent=r.bad||r.status||''; r.el=st;
+    var st=document.createElement('div'); st.className='st'+(r.bad?' bad':(r.cls?' '+r.cls:'')); st.textContent=r.bad||r.status||''; r.el=st;
     b.appendChild(inp); b.appendChild(st);
     var x=document.createElement('button'); x.type='button'; x.textContent='\u00d7'; x.setAttribute('aria-label','Remove from list');
     x.style.width='40px'; x.style.padding='8px'; x.disabled=busy;
@@ -235,6 +235,7 @@ function b64(blob){
   return new Promise(function(res,rej){var r=new FileReader();r.onload=function(){res(String(r.result).split(',')[1])};r.onerror=rej;r.readAsDataURL(blob)});
 }
 
+function setSt(r,cls,text){r.cls=cls;r.status=text;if(r.el){r.el.className='st'+(cls?' '+cls:'');r.el.textContent=text}}
 /* upload one by one */
 $('go').addEventListener('click',function(){
   if(busy) return;
@@ -250,18 +251,18 @@ $('go').addEventListener('click',function(){
       return;
     }
     var r=todo[n++];
-    r.el.className='st'; r.el.textContent='Preparing...';
+    setSt(r,'','Preparing...');
     shrink(r.file,r.ext).then(function(o){
       if(o.blob.size>12*1024*1024){throw new Error('File is too big (over 12 MB)')}
       var base=slug(r.caption)|| (kind==='gallery'?'photo-'+stamp+'-'+n:slug(stemOf(r.file.name))||'catalogue-'+stamp);
-      r.el.textContent='Uploading...';
+      setSt(r,'','Uploading...');
       return b64(o.blob).then(function(data){
         return api('/api/upload',{folder:kind,group:$('group').value,name:base+'.'+o.ext,content:data});
       });
     }).then(function(j){
-      if(j.ok){r.done=true;okCount++;r.el.className='st ok';r.el.textContent='Uploaded'}
-      else{failCount++;r.el.className='st bad';r.el.textContent=j.error||'Upload failed'}
-    }).catch(function(e){failCount++;r.el.className='st bad';r.el.textContent=(e&&e.message)||'Upload failed'}).then(next);
+      if(j.ok){r.done=true;okCount++;setSt(r,'ok','Uploaded')}
+      else{failCount++;setSt(r,'bad',j.error||'Upload failed')}
+    }).catch(function(e){failCount++;setSt(r,'bad',(e&&e.message)||'Upload failed')}).then(next);
   }
   next();
 });
