@@ -7,10 +7,10 @@ html.js:not(.entered) .ln>span,html.js:not(.entered) .hero .intro{animation:none
 .gate.open{pointer-events:none}
 
 /* cold room doors */
-.door{position:absolute;top:0;bottom:0;width:50.3%;z-index:0;background:var(--void);
+.gate .door{position:absolute;top:0;bottom:0;width:50.3%;z-index:0;background:var(--void);
   transition:transform 1.7s cubic-bezier(.77,0,.18,1),box-shadow .45s ease}
-.door.l{left:0;box-shadow:inset -1px 0 0 rgba(127,208,238,.16)}
-.door.r{right:0;box-shadow:inset 1px 0 0 rgba(127,208,238,.16)}
+.gate .door.l{left:0;box-shadow:inset -1px 0 0 rgba(127,208,238,.16)}
+.gate .door.r{right:0;box-shadow:inset 1px 0 0 rgba(127,208,238,.16)}
 .gate.ready .door.l{box-shadow:inset -1px 0 0 rgba(127,208,238,.95),0 0 40px rgba(127,208,238,.35)}
 .gate.ready .door.r{box-shadow:inset 1px 0 0 rgba(127,208,238,.95),0 0 40px rgba(127,208,238,.35)}
 .gate.open .door.l{transform:translateX(-101%)}
@@ -60,5 +60,16 @@ html.js:not(.entered) .ln>span,html.js:not(.entered) .hero .intro{animation:none
 @media(prefers-reduced-motion:reduce){
   .ask,.word span,.word b,.tag{opacity:1;animation:none;filter:none;transform:none}
   .yeah.on{animation:none}
-  .door{transition-duration:.4s}
+  .gate .door{transition-duration:.4s}
 }
+
+/* crystal forges above the question */
+.gate .crown{width:84px;height:84px;margin-bottom:26px;color:var(--snow);--logo-accent:var(--ice);stroke-dasharray:1;stroke-dashoffset:1;opacity:0;
+  animation:forge 2.4s cubic-bezier(.2,.7,.2,1) .3s forwards}
+@keyframes forge{
+  from{opacity:0;stroke-dashoffset:1;transform:rotate(-40deg) scale(.85);filter:blur(14px) drop-shadow(0 0 0 rgba(127,208,238,0))}
+  35%{opacity:1}
+  to{opacity:1;stroke-dashoffset:0;transform:none;filter:blur(0) drop-shadow(0 0 14px rgba(127,208,238,.45))}}
+.gate.quick .stage,.gate.quick .tag,.gate.quick .skip{display:none}
+@media(max-height:560px){.gate .crown{width:56px;height:56px;margin-bottom:14px}}
+@media(prefers-reduced-motion:reduce){.gate .crown{animation:none;opacity:1;stroke-dashoffset:0}}
