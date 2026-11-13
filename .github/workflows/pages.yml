@@ -29,13 +29,19 @@ jobs:
         with:
           node-version: 20
 
-      - name: Build catalogue list
-        run: node scripts/build-catalogues.mjs
+      - name: Install image tool
+        run: npm install --no-save sharp
+        continue-on-error: true   # if this fails, photos are used as uploaded
+
+      - name: Build catalogue and gallery lists
+        run: |
+          node scripts/build-catalogues.mjs
+          node scripts/build-gallery.mjs
 
       - name: Assemble site
         run: |
           mkdir _site
-          rsync -a --exclude '.git' --exclude '.github' --exclude 'scripts' --exclude '_site' ./ _site/
+          rsync -a --exclude '.git' --exclude '.github' --exclude '/scripts' --exclude '/_site' --exclude '/gallery' --exclude '/node_modules' --exclude '/package-lock.json' ./ _site/
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
