@@ -5,6 +5,7 @@
   function loadSite(){var s=document.createElement("script");s.src="script.js";document.body.appendChild(s)}
   if(!gate){html.classList.add("entered");loadSite();return}
 
+  var seen=false;try{seen=sessionStorage.getItem("wf-seen")==="1"}catch(e){}
   var parts=document.querySelectorAll("body > header, body > main, body > footer");
   parts.forEach(function(el){el.inert=true});
   function $(id){return document.getElementById(id)}
@@ -38,15 +39,17 @@
   size();window.addEventListener("resize",size);
   if(reduce){frame();cancelAnimationFrame(raf);raf=0}else{raf=requestAnimationFrame(frame)}
 
-  /* the question, then the button */
+  /* the question, then the button (repeat visitors in the same session get a short cooldown only) */
   var yeah=$("yeah"),started=false;
-  setTimeout(function(){yeah.classList.add("on");try{yeah.focus({preventScroll:true})}catch(e){}},reduce?300:4300);
+  if(seen){gate.classList.add("quick")}
+  else{setTimeout(function(){yeah.classList.add("on");try{yeah.focus({preventScroll:true})}catch(e){}},reduce?300:4300)}
 
   /* cooling loader */
   function start(){
     if(started)return;started=true;
+    try{sessionStorage.setItem("wf-seen","1")}catch(e){}
     gate.classList.add("loading");
-    var deg=$("deg"),fill=$("fill"),status=$("status"),t0=performance.now(),dur=reduce?900:2900,fontsOk=false;
+    var deg=$("deg"),fill=$("fill"),status=$("status"),t0=performance.now(),dur=reduce?900:(seen?1300:2900),fontsOk=false;
     if(document.fonts&&document.fonts.ready){document.fonts.ready.then(function(){fontsOk=true})}else{fontsOk=true}
     setTimeout(function(){fontsOk=true},4500);
     (function tick(now){
@@ -79,4 +82,5 @@
 
   yeah.addEventListener("click",start);
   $("skip").addEventListener("click",start);
+  if(seen)setTimeout(start,200);
 })();
