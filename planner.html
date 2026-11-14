@@ -16,32 +16,32 @@
 <link rel="stylesheet" href="home.css">
 <style>@media(max-width:400px){.mark span{display:none}.top nav{gap:10px}}</style>
 <style>
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0}
-.chip{font:600 13px "Archivo",sans-serif;padding:9px 16px;border:1px solid var(--rule,#c2d1d9);border-radius:999px;background:transparent;color:var(--ink,#12222b);cursor:pointer}
-.chip[aria-pressed="true"]{background:var(--ink,#12222b);color:var(--paper,#f3f6f7);border-color:var(--ink,#12222b)}
-.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
-@media(max-width:760px){.pgrid{grid-template-columns:1fr;gap:24px}}
-.pl label,.cap{display:block;font:600 13px "Archivo",sans-serif;color:var(--muted,#566b77);margin:18px 0 7px}
-.pl select,.pl input[type=number]{width:100%;padding:13px 14px;font:inherit;font-size:16px;color:var(--ink,#12222b);background:transparent;border:1px solid var(--rule,#c2d1d9);border-radius:8px}
-.row{display:flex;gap:10px}.row input{flex:1.4}.row select{flex:1}
-.pl input[type=range]{width:100%;accent-color:var(--signal,#0a6f8f)}
-.pl output{float:right;color:var(--ink,#12222b)}
-.scene{height:270px;perspective:900px;display:flex;align-items:center;justify-content:center;touch-action:pan-y;cursor:grab;user-select:none}
-.room{position:relative;width:0;height:0;transform-style:preserve-3d}
-.f{position:absolute;left:0;top:0;display:block;background:rgba(120,190,215,.2);border:1.5px solid rgba(10,111,143,.65)}
-.front,.back{width:var(--w);height:var(--h)}.left,.right{width:var(--d);height:var(--h)}.top,.bottom{width:var(--w);height:var(--d)}
-.front{transform:translate(-50%,-50%) translateZ(calc(var(--d)/2))}
-.back{transform:translate(-50%,-50%) rotateY(180deg) translateZ(calc(var(--d)/2))}
-.right{transform:translate(-50%,-50%) rotateY(90deg) translateZ(calc(var(--w)/2))}
-.left{transform:translate(-50%,-50%) rotateY(-90deg) translateZ(calc(var(--w)/2))}
-.top{transform:translate(-50%,-50%) rotateX(90deg) translateZ(calc(var(--h)/2))}
-.bottom{transform:translate(-50%,-50%) rotateX(-90deg) translateZ(calc(var(--h)/2));background:rgba(10,111,143,.28)}
-.door{position:absolute;left:50%;bottom:0;width:24%;height:72%;transform:translateX(-50%);border:1.5px solid rgba(10,111,143,.8);background:rgba(10,111,143,.18)}
-.dim{margin:6px 0 0;text-align:center;font:600 16px "Archivo",sans-serif}
-.hint{margin:4px 0 0;text-align:center;font-size:12px;color:var(--muted,#566b77)}
+.pl-chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0}
+.pl-chip{font:600 13px "Archivo",sans-serif;padding:9px 16px;border:1px solid var(--rule,#c2d1d9);border-radius:999px;background:transparent;color:var(--ink,#12222b);cursor:pointer}
+.pl-chip[aria-pressed="true"]{background:var(--ink,#12222b);color:var(--paper,#f3f6f7);border-color:var(--ink,#12222b)}
+.pl-pgrid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+@media(max-width:760px){.pl-pgrid{grid-template-columns:1fr;gap:24px}}
+.pl-sec label,.pl-cap{display:block;font:600 13px "Archivo",sans-serif;color:var(--muted,#566b77);margin:18px 0 7px}
+.pl-sec select,.pl-sec input[type=number]{width:100%;padding:13px 14px;font:inherit;font-size:16px;color:var(--ink,#12222b);background:transparent;border:1px solid var(--rule,#c2d1d9);border-radius:8px}
+.pl-row{display:flex;gap:10px}.pl-row input{flex:1.4}.pl-row select{flex:1}
+.pl-sec input[type=range]{width:100%;accent-color:var(--signal,#0a6f8f)}
+.pl-sec output{float:right;color:var(--ink,#12222b)}
+.pl-scene{height:270px;perspective:900px;display:flex;align-items:center;justify-content:center;touch-action:pan-y;cursor:grab;user-select:none}
+.pl-room{position:relative;width:0;height:0;transform-style:preserve-3d}
+.pl-f{position:absolute;left:0;top:0;display:block;background:rgba(120,190,215,.2);border:1.5px solid rgba(10,111,143,.65)}
+.pl-front,.pl-back{width:var(--w);height:var(--h)}.pl-left,.pl-right{width:var(--d);height:var(--h)}.pl-top,.pl-bottom{width:var(--w);height:var(--d)}
+.pl-front{transform:translate(-50%,-50%) translateZ(calc(var(--d)/2))}
+.pl-back{transform:translate(-50%,-50%) rotateY(180deg) translateZ(calc(var(--d)/2))}
+.pl-right{transform:translate(-50%,-50%) rotateY(90deg) translateZ(calc(var(--w)/2))}
+.pl-left{transform:translate(-50%,-50%) rotateY(-90deg) translateZ(calc(var(--w)/2))}
+.pl-top{transform:translate(-50%,-50%) rotateX(90deg) translateZ(calc(var(--h)/2))}
+.pl-bottom{transform:translate(-50%,-50%) rotateX(-90deg) translateZ(calc(var(--h)/2));background:rgba(10,111,143,.28)}
+.pl-door{position:absolute;left:50%;bottom:0;width:24%;height:72%;transform:translateX(-50%);border:1.5px solid rgba(10,111,143,.8);background:rgba(10,111,143,.18)}
+.pl-dim{margin:6px 0 0;text-align:center;font:600 16px "Archivo",sans-serif}
+.pl-hint{margin:4px 0 0;text-align:center;font-size:12px;color:var(--muted,#566b77)}
 #res{margin:16px 0 0;font-weight:600}
-.note{margin:22px 0 0;font-size:13px;color:var(--muted,#566b77);max-width:60ch}
-.acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.pl-note{margin:22px 0 0;font-size:13px;color:var(--muted,#566b77);max-width:60ch}
+.pl-acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
 </style>
 </head>
 <body class="has-fab">
@@ -73,32 +73,32 @@
   <section class="block first">
     <h1><span class="ln"><span data-t="title">Plan your cold room</span></span></h1>
     <p class="lead intro" data-t="intro"></p>
-    <div class="chips" id="langs" role="group" aria-label="Language"></div>
+    <div class="pl-chips" id="langs" role="group" aria-label="Language"></div>
   </section>
-  <section class="block pl">
-    <div class="pgrid">
+  <section class="block pl-sec">
+    <div class="pl-pgrid">
       <div>
         <label for="kind" data-t="q1"></label>
         <select id="kind"></select>
         <label for="qty" data-t="q2"></label>
-        <div class="row"><input id="qty" type="number" inputmode="decimal" min="0" value="2"><select id="unit" aria-label="Unit"><option value="t" data-t="tonnes"></option><option value="kg" data-t="kg"></option></select></div>
+        <div class="pl-row"><input id="qty" type="number" inputmode="decimal" min="0" value="2"><select id="unit" aria-label="Unit"><option value="t" data-t="tonnes"></option><option value="kg" data-t="kg"></option></select></div>
         <label data-t="q3"></label>
-        <div class="chips" id="temp" style="margin-top:0"></div>
-        <p class="cap" data-t="adjust" style="margin-top:26px"></p>
+        <div class="pl-chips" id="temp" style="margin-top:0"></div>
+        <p class="pl-cap" data-t="adjust" style="margin-top:26px"></p>
         <label><span data-t="len"></span><output id="oL"></output><input id="L" type="range" min="4" max="60" step="0.5"></label>
         <label><span data-t="wid"></span><output id="oW"></output><input id="W" type="range" min="4" max="40" step="0.5"></label>
         <label><span data-t="hei"></span><output id="oH"></output><input id="H" type="range" min="7" max="14" step="0.5"></label>
       </div>
       <div>
-        <div class="scene" id="scene"><div class="room" id="room"><i class="f front"><b class="door"></b></i><i class="f back"></i><i class="f left"></i><i class="f right"></i><i class="f top"></i><i class="f bottom"></i></div></div>
-        <p class="dim" id="dim"></p>
-        <p class="hint" data-t="drag"></p>
+        <div class="pl-scene" id="scene"><div class="pl-room" id="room"><i class="pl-f pl-front"><b class="pl-door"></b></i><i class="pl-f pl-back"></i><i class="pl-f pl-left"></i><i class="pl-f pl-right"></i><i class="pl-f pl-top"></i><i class="pl-f pl-bottom"></i></div></div>
+        <p class="pl-dim" id="dim"></p>
+        <p class="pl-hint" data-t="drag"></p>
         <p id="res"></p>
       </div>
     </div>
-    <p class="note" data-t="note"></p>
-    <div class="acts"><a class="btn" id="go" href="inquiry.html" data-t="send"></a><a class="btn wa" id="wa" target="_blank" rel="noopener" data-t="wa"></a></div>
-    <noscript><p class="note">Please turn on JavaScript to use the planner.</p></noscript>
+    <p class="pl-note" data-t="note"></p>
+    <div class="pl-acts"><a class="btn" id="go" href="inquiry.html" data-t="send"></a><a class="btn wa" id="wa" target="_blank" rel="noopener" data-t="wa"></a></div>
+    <noscript><p class="pl-note">Please turn on JavaScript to use the planner.</p></noscript>
   </section>
 </main>
 
@@ -129,13 +129,13 @@ function clamp(x,a,b){return Math.min(b,Math.max(a,x))}
 function m(ft){return (ft*0.3048).toFixed(1)}
 
 [["en","English"],["hi","हिन्दी"],["gu","ગુજરાતી"],["hg","Hinglish"]].forEach(function(l){
-  var b=document.createElement("button");b.type="button";b.className="chip";b.textContent=l[1];b.setAttribute("data-l",l[0]);
+  var b=document.createElement("button");b.type="button";b.className="pl-chip";b.textContent=l[1];b.setAttribute("data-l",l[0]);
   b.addEventListener("click",function(){lang=l[0];try{localStorage.setItem("wf_lang",lang)}catch(e){}apply()});
   $("langs").appendChild(b);
 });
 Object.keys(D).forEach(function(k){var o=document.createElement("option");o.value=k;o.setAttribute("data-t","p_"+k);$("kind").appendChild(o)});
 ["chilled","frozen"].forEach(function(k){
-  var b=document.createElement("button");b.type="button";b.className="chip";b.setAttribute("data-t",k);b.setAttribute("data-k",k);
+  var b=document.createElement("button");b.type="button";b.className="pl-chip";b.setAttribute("data-t",k);b.setAttribute("data-k",k);
   b.addEventListener("click",function(){S.temp=k;update()});
   $("temp").appendChild(b);
 });
