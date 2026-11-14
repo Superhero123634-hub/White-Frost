@@ -1,48 +1,73 @@
-# White Frost
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="logo-light.svg">
+    <img src="logo.svg" alt="White Frost crystal logo" width="88" height="88">
+  </picture>
+</p>
 
-**Refrigeration tools, spares and cold rooms, Gandhidham, Kutch**
+<h1 align="center">White Frost</h1>
 
-Website: [whitefrost.us.ci](https://whitefrost.us.ci)
+<p align="center">
+  Refrigeration tools, spare parts and complete cold rooms.<br>
+  Gandhidham, Kutch, Gujarat.
+</p>
+
+<p align="center">
+  <a href="https://whitefrost.us.ci"><strong>Visit our website</strong></a>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="https://wa.me/919825940670?text=Hello%20White%20Frost%2C%20I%20would%20like%20to%20enquire%20about%20your%20refrigeration%20products."><strong>Message us on WhatsApp</strong></a>
+</p>
 
 ---
 
-## About
+## Welcome
 
-White Frost is a refrigeration supplier based in Gandhidham, Kutch. We supply the parts, tools and equipment that refrigeration businesses depend on, from a single relay to a complete plant. Our customers include technicians, contractors, shop owners and businesses that need cold storage.
+This is the home of the White Frost website. If you found us here, you are in the right place: everything about what we sell, current stock and prices, and how to reach us is on our website at **[whitefrost.us.ci](https://whitefrost.us.ci)**.
+
+We are an authorised dealer of Ice Make Refrigeration Limited. If you would like to see our certificate of authorisation, just ask.
 
 ## What we supply
 
-| Category | Details |
-|---|---|
-| Compressors | Hermetic, semi-hermetic and scroll, for repair and replacement |
-| Condensing units | Air and water cooled, from small shops to large stores |
-| Evaporators and coils | Unit coolers, fans, heaters and defrost parts |
-| Controls and valves | Thermostats, controllers, solenoid and expansion valves, pressure switches |
-| Refrigerant gases and service tools | Refrigerants, gauges, vacuum pumps, flaring and brazing kits |
-| Spare parts | Capacitors, relays, motors, filter driers and other small components |
+- **Coolers and freezers.** Water coolers, visi coolers, glass top coolers, and hard top and glass top freezers in many sizes.
+- **Copper and aluminium lines.** A wide range for refrigeration work.
+- **Compressors and condensing units.** For repair, replacement and new installations.
+- **Evaporators, coils, controls and valves.** Unit coolers, fans, thermostats, controllers and valves.
+- **Gases and tools.** Refrigerants, gauges, vacuum pumps, flaring and brazing kits.
+- **Spare parts.** Capacitors, relays, motors, filter driers and the small parts that stop a system.
+- **Cold rooms.** Chillers and freezers built to your space and the temperature you need, from fresh produce and dairy to frozen food and blast freezing.
 
-## Cold rooms
+Not sure what you need? Tell us what you are storing or what has stopped working, and we will point you to the right part or size.
 
-We supply cold rooms as one complete system: panels, doors, refrigeration equipment and controls. Each room is sized to your space and load, so you deal with a single supplier from requirement to delivery.
+## New stock and festive offers
 
-## How to order
+New arrivals, special prices and festive offers are posted on the website as soon as we have them. Prices change, so please message us to confirm before you visit.
 
-1. Name the part or describe your project.
-2. We confirm stock and price.
-3. Send an enquiry from the website by email or WhatsApp. The message is written for you.
-4. For urgent needs, call us directly.
+## How to enquire
 
-## Why White Frost
+The quickest way is a message. Please include:
 
-- One supplier for parts, tools and complete cold rooms
-- Stock and price confirmed before you commit
-- Easy contact by phone, email or WhatsApp
-- Local presence in Gandhidham, Kutch
+1. The product name or model, or a photo of the old part
+2. How many you need
+3. Your town or area
 
-## Contact
+| | |
+| --- | --- |
+| **WhatsApp** | [+91 98259 40670](https://wa.me/919825940670) |
+| **Phone** | [+91 98259 40670](tel:+919825940670) |
+| **Email** | [hariomrefgim@gmail.com](mailto:hariomrefgim@gmail.com) |
+| **Enquiry form** | [whitefrost.us.ci/inquiry.html](https://whitefrost.us.ci/inquiry.html) |
 
-- **Phone / WhatsApp:** [+91 98259 40670](tel:+919825940670)
-- **Email:** [hariomrefgim@gmail.com](mailto:hariomrefgim@gmail.com)
-- **Location:** Gandhidham, Kutch
-  
-© White Frost, Gandhidham, Kutch
+The enquiry form writes your message for you and opens your email or WhatsApp. You only need to press send.
+
+## Find us
+
+**White Frost**
+Gandhidham, Kutch, Gujarat, India
+
+Message us on WhatsApp for directions and shop timings.
+
+---
+
+<p align="center">
+  <sub>© White Frost. All rights reserved.</sub>
+</p>
